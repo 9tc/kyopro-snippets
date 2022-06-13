@@ -1,7 +1,8 @@
-template<class V> struct MaxFlow { // Dinic O(V^2E)
+template<class T>
+struct MaxFlow { // Dinic O(V^2E)
   struct edge{
     int to, reve;
-    V cap;
+    T cap;
     edge(int t, int r, V c) : to(t), reve(r), cap(c) {}
   };
   int MV;
@@ -34,7 +35,7 @@ template<class V> struct MaxFlow { // Dinic O(V^2E)
     }
   }
 
-  V dfs(int from, int to, V cf){
+  V dfs(int from, int to, T cf){
     if(from == to) return cf;
     for(; itr[from]<E[from].size(); itr[from]++) {
       edge* e = &E[from][itr[from]];
