@@ -1,13 +1,12 @@
 void _dfs(const Graph &G, int v, vector<bool> &seen) {
-  seen[v] = true; // v を訪問済にする
+  seen[v] = true;
 
-  // v から行ける各頂点 next_v について
-  for (auto u : G[v]) {
-    if (seen[u]) continue;
+  for(auto u: G[v]){
+    if(seen[u]) continue;
     /*
     * TODO *
     */
-    _dfs(G, u, seen); // 再帰的に探索
+    _dfs(G, u, seen);
   }
 }
 
