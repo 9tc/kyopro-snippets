@@ -22,6 +22,7 @@ using ll = long long;
 
 
 #define Graph vector<vector<int> >
+#define CostGraph vector<vector<pair<int,ll> > >
 #define PII pair<int,int>
 #define VI vector<int>
 #define VL vector<ll>
