@@ -99,7 +99,7 @@ string convertNtoMAry(string str, int n, int m){
   }
 
   if(t == 0) return "0";
-  while(tmp != 0){
+  while(t != 0){
     ret = decton(t % m) + ret;
     t /= m;
   }
