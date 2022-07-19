@@ -62,7 +62,10 @@ inline T input(){
 }
 template <class T>
 inline void printVec(std::vector<T> v){
-  REP(i,v.size()) std::cout << v[i] << " " << std::endl[i == v.size()-1];
+  REP(i,v.size()){
+    if(i) std::cout << " ";
+    std::cout << v[i];
+  } std::cout << std::endl;
 }
 
 using namespace std;

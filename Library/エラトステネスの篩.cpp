@@ -4,7 +4,7 @@ vector<bool> getPrimeNumbers(int n){
   isPrime[1] = false; // 1は素数ではない
   for(int i = 2; i * i <= n; ++i){
     if(isPrime[i]){
-      for(int j = 2; i * j <= max; ++j){
+      for(int j = 2; i * j <= n; ++j){
         isPrime[i*j] = false;
       }
     }
