@@ -8,7 +8,7 @@ using ll = long long;
 
 #define INF (int)1e9
 #define LLINF (long long)1e18
-#define MOD (int)1e9+7
+#define MOD (int)(1e9+7)
 #define MOD9 (int)998244353
 #define PI 3.141592653589
 #define PB push_back
