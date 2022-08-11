@@ -39,27 +39,40 @@ using ll = long long;
 
 template <class T>
 inline bool chmin(T &a, T b) {
-	if(a > b){ a = b; return true;}
-	return false;
+  if(a > b){ a = b; return true;}
+  return false;
 }
 template <class T>
 inline bool chmax(T &a, T b) {
-	if(a < b){a = b; return true;}
-	return false;
+  if(a < b){a = b; return true;}
+  return false;
 }
 template <class T>
 T GCD(T a, T b) {
-	if (b == 0) return a;
-	return GCD(b, a % b);
+  if (b == 0) return a;
+  return GCD(b, a % b);
 }
 template <class T>
 inline T LCM(T a, T b) {
-	return (a * b) / GCD(a, b);
+  return (a * b) / GCD(a, b);
 }
-template <class T>
-inline T input(){
-  T t; std::cin >> t; return t;
-}
+struct input{
+  int n;
+  input() {}
+  input(int n_) : n(n_){};
+  template <class T>
+  operator T(){
+    T ret;
+    std::cin >> ret;
+    return ret;
+  }
+  template <class T>
+  operator std::vector<T>() {
+    std::vector<T> ret(n);
+    REP(i,n) std::cin >> ret[i];
+    return ret;
+  }
+};
 template <class T>
 inline void printVec(std::vector<T> v){
   REP(i,v.size()){
